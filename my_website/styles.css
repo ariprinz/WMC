@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    background-color: #1d1d1d;
+    color: #fff;
+   
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: fixed;
+    z-index: 1000;
+    background-color: #1d1d1d;
+    top: 0;
+    left: 0;
+    width: 100%; 
+}
+
+.logo {
+    width: 50px;
+    margin-right: 16rem;
+}
+
+.logo svg {
+    fill: #fff;
+    width: 100%;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+
+}
+
+.nav-links a.active {
+    text-decoration: underline;
+  }
+
+
+/* Main content homepage */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 20rem 20rem 10rem 20rem;
+    position: relative;
+}
+
+.photo-container {
+    width: 100%;
+    position: relative;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    position: relative;
+    
+}
+
+.overlapping-photo {
+    position: absolute;
+    left: -120px;
+    top: -110px;
+    width: 500px;
+    height: auto;
+    z-index: 2;
+}
+
+.text-content {
+    margin-top: 200px;
+}
+
+/* Main content foto */
+.content-f {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 20rem 10rem 20rem;
+    align-items: flex-start;
+}
+
+.content-f  img {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    transform: translateY(8rem);
+}
+
+.image-container-f {
+    margin-bottom: 8rem;
+    text-align: left;
+    width: 100%;
+}
+
+.image-container-f img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.image-container-f:nth-child(2) img {
+    margin: 0 0 0 auto;
+}
+
+.image-container-f:nth-child(2) p {
+    margin-left: 38.5rem;
+}
+
+
+.image-container-f p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    color: #7b7b7b;
+    text-align: left;
+}
+
+/* Footer */
+
+.footer-line {
+    width: 33.33%;
+    height: 1px;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    position: relative;
+    left: -2rem;
+    
+}
+
+footer p {
+    left: 2rm;
+    font-size: 1rem;
+    padding: 0.5rem 0 1rem 2rem;
+
+    
+}
+
+footer a {
+    left: 2rm;
+    color: #fff;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+footer a:hover {
+    color: #fff;
+}

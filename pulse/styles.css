@@ -1,0 +1,382 @@
+:root {
+    --pulse-color-page-background: #eafaf1;
+    --pulse-color-card-background: #d6dae5;
+    --pulse-color-faq-background: #fcfcfc;
+    --pulse-color-headings: #00ad6a;
+    --pulse-color-buttons: #1fe374;
+    --pulse-color-dark: #080c16;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    
+}
+
+body {
+    background: var(--pulse-color-page-background);
+    color: var(--pulse-color-dark);
+}
+
+
+
+
+nav {
+    position: fixed;
+    top: 0; 
+    background: var(--pulse-color-page-background);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 2rem 10rem 1rem 10rem;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    height: auto;
+    width: 50%;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--pulse-color-headings);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+
+}
+
+.nav-links a:hover {
+    border: 2px solid;
+}
+
+.nav-links a.active {
+    color: var(--pulse-color-dark);
+    border: 0;
+
+}
+
+
+
+
+.middle {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.heading-text {
+    text-align: center;
+    margin: 8rem 0 6rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+    max-width: 450px;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    line-height: 1;
+}
+
+.heading-text p {
+    max-width: 460px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card-basic {
+    position: relative;
+    padding: 10rem 6rem 0 0;
+
+}
+
+.card-basic h3 {
+    color: var(--pulse-color-headings);
+}
+
+.card-basic ul {
+    list-style-type: disc;
+    margin: 2rem 0 2rem 1rem; 
+}
+
+.card-basic a {
+    color: var(--pulse-color-dark);
+}
+
+.card-recommended-border {
+    border: 2px solid var(--pulse-color-headings);
+    border-radius: 8px 8px 0 0;
+}
+
+.recommended-banner {
+    background: var(--pulse-color-headings);
+    color: white;
+    text-align: center;
+    width: 100%;
+    display: block;
+    border-radius: 6px 6px 0 0;
+    padding: 0.5rem;
+}
+
+.card-recommended {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffff;
+}
+
+.card-recommended h3 {
+    font-size: 4rem;
+    text-align: center;
+    line-height: 1;
+    color: var(--pulse-color-headings);
+    margin-top: 3rem;
+}
+
+.price {
+    color: #666;
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 1rem 0 2rem 0;
+}
+
+button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--pulse-color-buttons);
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+}
+
+button a {
+    color: var(--pulse-color-dark);
+    text-decoration: none;
+}
+
+button a:hover {
+    color: #ffff;
+    text-decoration: none;
+}
+
+.caps {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.list-checkmark ul {
+    margin: 0.5rem 2rem 2rem 2rem;
+    list-style-type: none;
+    padding-left: 1.5em;  
+    
+}
+
+.list-checkmark ul li:before {
+    content: '✓';
+    display: inline-block;
+    margin-left: -1.5em; 
+    width: 1.5em; 
+    color: var(--pulse-color-headings);
+    font-weight: bold;
+}
+
+.extra-banner {
+    background: #f1f1f1;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 1.5rem 3rem;
+    border: 2px solid #d4d4d4;
+    border-left: none;
+    margin-top: 4rem;
+}
+
+.card-extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffff;
+    border: 2px solid #d4d4d4;
+    border-top: none;
+    border-left: none;
+}
+
+.card-extra h3 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1;
+    color: var(--pulse-color-headings);
+    margin-top: 2rem;
+    font-weight: lighter;
+}
+
+
+
+
+.subvert-logo {
+    width: 60px;
+    margin: 3rem auto;
+    display: block;
+    margin-bottom: 0;
+}
+
+.quote {
+    display: block;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    padding: 1.5rem 0 1rem 0;
+}
+
+.caps-green {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: small;
+    color: var(--pulse-color-headings);
+    margin-top: 0.5rem;
+}
+
+
+
+
+.faq-section {
+    padding: 4rem 0;
+    background: var(--pulse-color-faq-background);
+    margin-top: 4rem;
+}
+
+.faq-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    padding-left: 10rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--pulse-color-dark);
+}
+
+.faq-item p {
+    line-height: 1.6;
+    color: #666;
+}
+
+
+
+
+footer{
+    background-color: var(--pulse-color-dark);
+    color: #666;
+    
+    width: 100%;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 4.5rem 11rem 0 11rem ;
+}
+
+.footer-top button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-footer {
+    width: 50%;
+    height: auto;
+    padding-bottom: 3rem;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35%;
+   
+}
+
+h4 {
+    color: #ffff;
+}
+
+footer li {
+    list-style-type: none;
+    padding-top: 0.8rem;
+}
+
+footer li a {
+    color: var(--pulse-color-headings);
+    text-decoration: none;
+}
+
+footer li a:hover {
+    color: var(--pulse-color-headings);
+    text-decoration:underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 7rem 1rem 1rem 10rem;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.footer-bottom a {
+    color: #666;
+}
+
+.footer-bottom button {
+    border-style: solid;
+    border-color: #ffff;
+    background-color: var(--pulse-color-headings);
+    font-size: 0.9rem;
+}
+
+.footer-bottom button:hover {
+    border-color: var(--pulse-color-dark);
+}
+
+
+.footer-bottom button a {
+    color: #ffff;
+}
+
+.footer-bottom button a:hover {
+    color: var(--pulse-color-dark);
+}
