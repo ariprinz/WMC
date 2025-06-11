@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphenprogramm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <canvas id="matrix-bg"></canvas>
+    
+    <div id="main-content">
+    <div class="container">
+        <h1>Matrix Multiplikation</h1>
+        
+        <div class="matrix-section">
+            <div class="matrix-input">
+                <h3>Matrix A</h3>
+                <textarea id="matrixA" placeholder="Matrix A eingeben&#10;&#10;Format:&#10;1;2;3&#10;4;5;6"></textarea>
+                <div class="button-group">
+                    <button onclick="generateRandomMatrix('matrixA')">Matrix generieren</button>
+                    <label for="fileA" class="file-label">CSV hochladen</label>
+                    <input type="file" id="fileA" class="file-input" accept=".csv" onchange="loadCSV('fileA', 'matrixA')">
+                </div>
+            </div>
+            
+            <div class="matrix-input">
+                <h3>Matrix B</h3>
+                <textarea id="matrixB" placeholder="Matrix B eingeben&#10;&#10;Format:&#10;1;2;3&#10;4;5;6"></textarea>
+                <div class="button-group">
+                    <button onclick="generateRandomMatrix('matrixB')">Matrix generieren</button>
+                    <label for="fileB" class="file-label">CSV hochladen</label>
+                    <input type="file" id="fileB" class="file-input" accept=".csv" onchange="loadCSV('fileB', 'matrixB')">
+                </div>
+            </div>
+        </div>
+
+        <div class="multiply-section">
+            <button class="multiply-btn" onclick="multiplyMatrices()">Matrizen multiplizieren</button>
+        </div>
+
+        <div class="result-section">
+            <div class="result-bg">
+            <h2>Ergebnis der Matrizenmultiplikation</h2>
+            <div id="resultMatrix" class="result-matrix"></div>
+            </div>
+            
+            <div class="result-bg">
+            <h2>Graphenanalyse</h2>
+            <div id="analysisResults" class="analysis-results"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="matrix.js"></script>
+    <script src="funktionen.js"></script>
+</body>
+</html>
